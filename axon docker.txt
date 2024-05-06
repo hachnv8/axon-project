@@ -1,0 +1,7 @@
+docker run --name axonserver -p 8024:8024 -p 8124:8124 -v "/d/Udemy course/axon-project/docker-data/data":/data -v "/d/Udemy course/axon-project/docker-data/eventdata":/eventdata -v "/d/Udemy course/axon-project/docker-data/config":/config axoniq/axonserver 
+
+
+server.port=8024
+axoniq.axonserver.name=My Axon Server
+axoniq.axonserver.hostname=localhost
+axoniq.axonserver.devmode.enabled=true
