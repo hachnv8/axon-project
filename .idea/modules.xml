@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Event-driven Microservices_CQRS_SAGA_Axon.iml" filepath="$PROJECT_DIR$/.idea/Event-driven Microservices_CQRS_SAGA_Axon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProductService/ProductService.iml" filepath="$PROJECT_DIR$/ProductService/ProductService.iml" />
     </modules>
   </component>
 </project>
