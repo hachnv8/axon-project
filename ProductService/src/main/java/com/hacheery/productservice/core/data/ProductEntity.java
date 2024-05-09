@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.checkerframework.common.aliasing.qual.Unique;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -22,6 +21,7 @@ public class ProductEntity implements Serializable {
     @Column(unique = true, nullable = false)
     private String productId;
 
+    @Column(nullable = false, length = 50)
     private String title;
     private BigDecimal price;
     private Integer quantity;
