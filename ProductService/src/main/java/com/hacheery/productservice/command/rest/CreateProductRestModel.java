@@ -1,4 +1,4 @@
-package com.hacheery.productservice.rest;
+package com.hacheery.productservice.command.rest;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

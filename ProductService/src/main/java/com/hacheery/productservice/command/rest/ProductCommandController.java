@@ -1,10 +1,8 @@
-package com.hacheery.productservice.controller;
+package com.hacheery.productservice.command.rest;
 
 import com.hacheery.productservice.command.CreateProductCommand;
-import com.hacheery.productservice.rest.CreateProductRestModel;
 import lombok.RequiredArgsConstructor;
 import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -12,8 +10,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/products")
 @RequiredArgsConstructor
-public class ProductController {
-    private final Environment environment;// dùng để quản lý cấu hình ứng dụng trong các file properties, yaml,..
+public class ProductCommandController {
     private final CommandGateway commandGateway;
 
     @PostMapping
@@ -31,11 +28,6 @@ public class ProductController {
             returnValue = e.getLocalizedMessage();
         }
         return returnValue;
-    }
-
-    @GetMapping
-    public String getProducts() {
-        return "Product list " + environment.getProperty("local.server.port");
     }
 
     @PutMapping
